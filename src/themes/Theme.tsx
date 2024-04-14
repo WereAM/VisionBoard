@@ -1,25 +1,26 @@
 import React from 'react'
-import { ThemeProvider ,createTheme } from '@mui/material/styles'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 
 const theme = createTheme({
   palette: {
     mode : 'dark',
     primary: {
-        main: '#c1d0b5',
-        light: '#dbead2',
-        contrastText: '#fff8de',
+        main: '#55494O',
+        light: '#C9AD93',
+        contrastText: '#819171',
     },
     secondary: {
         main: '#d9cbc0',
         light: '#ecd3bd',
+        dark: '#758467',
     },
     text: {
-        primary: '#1f261a',
+        primary: '#000000',
         secondary: '#4d5d53',
     },
     background: {
-        default: '#f1e8ca',
-        paper: '#bbcbdb',
+        default: '#DDFE6DA',
+        paper: '#CBD5C0',
     },
   },
 
@@ -65,5 +66,5 @@ export default function ThemeManager({children} : ThemeProps){
         <ThemeProvider theme={theme}>
             {children}
         </ThemeProvider>
-    )
+    );
 }
