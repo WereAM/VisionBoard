@@ -1,15 +1,11 @@
 import * as React from 'react';
-// import AppBar from '@mui/material/AppBar';
-// import Container from '@mui/material/Container';
-import { Toolbar, Container, AppBar, Typography, IconButton, Box, Menu, MenuItem, Button, Stack, keyframes } from '@mui/material';
+import { AppBar, Typography, Stack, keyframes, useTheme } from '@mui/material';
 import Image from '@mui/icons-material';
-import Logo from '../logo.svg';
+import Logo from '../images/logo.png';
 import MenuIcon from '@mui/icons-material/Menu';
 import CreateButton from '../buttons/CreateButton';
 import NavButtons from '../buttons/NavButtons';
 
-
-// const pages = ['Goals', 'Vision Board', 'Dream Board', 'Mood Board'];
 const resourceKeyFrame = keyframes`
     0%{
         opacity: 1;
@@ -23,16 +19,7 @@ const resourceKeyFrame = keyframes`
 `;
 
 const Navbar = () => {
-
-    // const [navMenu, setNavMenu] = React.useState<null | HTMLElement>(null);
-
-    // const handleOpenNavMenu = (e: React.MouseEvent<HTMLElement>) => {
-    //     setNavMenu(e.currentTarget);
-    // };
-
-    // const handleCloseNavMenu = () => {
-    //     setNavMenu(null);
-    // };
+    const theme = useTheme();
 
     return(
         <AppBar 
@@ -42,7 +29,7 @@ const Navbar = () => {
                 px: 3, 
                 py: 2.5, 
                 pb: 2, 
-                bgcolor: 'transparent', 
+                bgcolor: 'background.default',    
                 backdropFilter: 'blur(8px)',
             }}
         >
@@ -56,19 +43,19 @@ const Navbar = () => {
                 >
                     <Stack direction='row' alignItems='center' spacing={5}>
                         {/* Logo */}
-                        {/* <img 
+                        <img 
                             src={Logo} alt='logo' 
                             style={{height: '30px', objectFit: 'contain'}} 
-                        /> */}
+                        />
 
                         {/* App Name */}
                         <Typography 
                             variant='body2' 
                             sx={{
-                                color:'primary.light', 
+                                color:'primary.main',  
                                 letterSpacing: '3px', 
                                 animation: `${resourceKeyFrame} 3s inifinite ease`}}>
-                            See The Vision?
+                            VISIONPULSE
                         </Typography>
                     </Stack>
                     
