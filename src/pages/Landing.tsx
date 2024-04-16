@@ -4,15 +4,23 @@ import Hero from "../components/Hero"
 import Marquee from "../components/Marquee"
 import Footer from "../components/Footer"
 import { Box } from "@mui/material"
+import { useTheme } from "@emotion/react"
 
 const Landing = () => {
+    const theme = useTheme();
+
     return (
-        <Box >
+        <Box 
+            sx={{
+                bgcolor: 'background.default',
+            }
+            }
+        >
             <Navbar />
 
-            <Hero />
-
             {/* <Marquee /> */}
+
+            <Hero />
 
             <Footer />
         </Box>
