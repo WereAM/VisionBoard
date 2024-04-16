@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     <Container
-      sx={{height: '60vh', mb: 20}}  
+      sx={{height: '85vh'}}  
     >
       {/* Logo and button */}
       <Stack 

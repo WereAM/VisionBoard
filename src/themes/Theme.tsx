@@ -1,5 +1,5 @@
-import React from 'react'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
+import React from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
@@ -19,7 +19,7 @@ const theme = createTheme({
         secondary: '#4d5d53',
     },
     background: {
-        default: '#DDFE6DA',
+        default: '#DDF6DA',
         paper: '#CBD5C0',
     },
   },
